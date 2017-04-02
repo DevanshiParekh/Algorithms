@@ -1,0 +1,20 @@
+According to Wikipedia :
+"The knapsack problem or rucksack problem is a problem in combinatorial optimization: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible. It derives its name from the problem faced by someone who is constrained by a fixed-size knapsack and must fill it with the most valuable items."
+
+Types of Knapsack problem:
+0/1 knapsack problem: we can either choose an item or leave it
+fractional problem: we can consider to take a part of the item from the available list
+
+We can solve this in 3 ways : 
+1. giving priority to the weights ignoring the profit
+2. giving priority to the profits ignoring the weight
+3. Taking density (i.e profit/ weight) for each item giving priority to hightest value
+
+Here we will be solving the same using the 3rd option
+
+Algorithm to solve this:
+1. Take number of items, max weight that the sack can hold, associated weights and prices of the items from the user.
+2. calculate the density of each item and sort it in descending order
+3. Take all the items possible into the sack until we have items weighing either less than or equal to the max weight of the sack
+4. we stop at step 3 if we are implementing 0/1 knapsack but as we are implementing fractional knapsack where we have a liberty of considering a part of an item also we get the remaining weight and multiply it with its density to get its price.
+5. Atlast we print the overal benefit which we get from these.......:)
