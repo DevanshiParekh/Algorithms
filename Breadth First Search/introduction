@@ -1,0 +1,25 @@
+Level-Order Traversal (BFS)
+A level-order traversal of tree  is a recursive algorithm that processes the root, followed by the children of the root (from left to right), followed by the grandchildren of the root (from left to right), etc. The basic algorithm shown below uses a queue of references to binary trees to keep track of the subtrees at each level:
+levelOrder(BinaryTree t) {
+    if(t is not empty) {
+        // enqueue current root
+        queue.enqueue(t)
+        
+        // while there are nodes to process
+        while( queue is not empty ) {
+            // dequeue next node
+            BinaryTree tree = queue.dequeue();
+            
+            process tree's root;
+            
+            // enqueue child elements from next level in order
+            if( tree has non-empty left subtree ) {
+                queue.enqueue( left subtree of t )
+            }
+            if( tree has non-empty right subtree ) {
+                queue.enqueue( right subtree of t )
+            }
+        }
+    } 
+} 
+Because a level-order traversal goes level-by-level, it's also known as a breadth-first-search (BFS).
