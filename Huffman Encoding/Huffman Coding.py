@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Name:        Huffman Encoding
+# Name:        Huffman Coding
 # Purpose:
 #
 # Author:      Devanshi
@@ -47,9 +47,11 @@ def display(root):
        if root.left == None and root.right==None:
             print(root.name,"".join(str(x) for x in root.string))
        if root.left !=None:
+        #if you have left node then string value will be value of the string of root + zero
             root.left.string=root.string+[0]
             display(root.left)
        if root.right !=None:
+        #if you have right node then string value will be value of the string of root + one
             root.right.string=root.string+[1]
             display(root.right)
 
