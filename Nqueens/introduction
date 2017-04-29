@@ -1,0 +1,14 @@
+Introduction
+Objective : In chess, a queen can move as far as she pleases, horizontally, vertically, or diagonally. A chess board has 8 rows and 8 columns. The standard 8 by 8 Queen’s problem asks how to place 8 queens on an ordinary chess board so that none of them can hit any other in one move.
+
+Algorithm:
+
+Place the queens column wise, start from the left most column
+If all queens are placed.
+return true and print the solution matrix.
+Else
+Try all the rows in the current column.
+Check if queen can be placed here safely if yes mark the current cell in solution matrix as 1 and try to solve the rest of the prob­lem recursively.
+If placing the queen in above step leads to the solution return true.
+If placing the queen in above step does not lead to the solution , BACKTRACK, mark the current cell in solution matrix as 0 and return false.
+If all the rows are tried and nothing worked, return false and print NO SOLUTION.
